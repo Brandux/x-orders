@@ -9,6 +9,8 @@ from sqlalchemy import exc
 users_blueprint = Blueprint('users', __name__, template_folder='./templates')
 
 
+#  area de servicios
+
 @users_blueprint.route('/orders/ping', methods=['GET'])
 def ping_pong():
     return jsonify({

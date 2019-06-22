@@ -13,7 +13,7 @@ class TestUserService(BaseTestCase):
 
     def test_users(self):
         """Asegurando que la ruta /ping  se comporta correctamente."""
-        response = self.client.get('/users/ping')
+        response = self.client.get('/orders/ping')
         data = json.loads(response.data.decode())
         self.assertEqual(response.status_code, 200)
         self.assertIn('pong!', data['message'])
